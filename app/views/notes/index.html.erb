@@ -1,0 +1,21 @@
+<h1>Todas as anotações!</h1>
+<%= link_to 'Criar uma nova anotação', new_note_path %>
+ 
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Conteúdo</th>
+  </tr>
+ 
+  <% @notes.each do |note| %>
+    <tr>
+      <td><%= note.title %></td>
+      <td><%= note.content %></td>
+      <td><%= link_to 'Mostrar', note_path(note) %></td>
+      <td><%= link_to 'Editar', edit_note_path(note) %></td>
+      <td><%= link_to 'Deletar', note_path(note),
+              method: :delete,
+              data: { confirm: 'Tem certeza que deseja deletar essa anotação?' } %></td>
+    </tr>
+  <% end %>
+</table>

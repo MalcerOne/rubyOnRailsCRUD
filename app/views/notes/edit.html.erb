@@ -1,0 +1,34 @@
+<h1>Edite a anotação!</h1>
+ 
+<%= form_for :note, url: note_path(@note), method: :patch do |f| %>
+ 
+  <% if @note.errors.any? %>
+    <div id="erro_validation">
+      <h2>
+        <%= pluralize(@note.errors.count, "erros") %> fizeram com que houvesse um erro na criação da anotação:
+      </h2>
+      <ul>
+        <% @note.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Voltar', notes_path %>
