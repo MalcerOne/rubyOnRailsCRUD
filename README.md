@@ -1,4 +1,4 @@
-# README
+# Simple CRUD web application using Ruby on Rails framework
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
