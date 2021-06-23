@@ -1,15 +1,18 @@
-<p>
-  <strong>Título:</strong>
-  <%= @note.title %>
-</p>
- 
-<p>
-  <strong>Conteúdo:</strong>
-  <%= @note.content %>
-</p>
+<%= render 'appbar' %>
+<div class="container_show">
+  <p>
+    <strong>Título:</strong>
+    <%= @note.title %>
+  </p>
+  
+  <p>
+    <strong>Conteúdo:</strong>
+    <%= @note.content %>
+  </p>
 
-<%= link_to 'Editar', edit_note_path(@note) %> |
-<%= link_to 'Deletar', note_path(@note),
-              method: :delete,
-              data: { confirm: 'Tem certeza que deseja deletar essa anotação?' } %> |
-<%= link_to 'Voltar', notes_path %>
+  <%= link_to '<button class="buttonAction">Editar</button>'.html_safe, edit_note_path(@note) %>
+  <%= link_to '<button class="buttonAction">Deletar</button>'.html_safe, note_path(@note),
+                method: :delete,
+                data: { confirm: 'Tem certeza que deseja deletar essa anotação?'} %>
+  <%= link_to '<button class="buttonAction">Voltar</button>'.html_safe, notes_path %>
+</div>

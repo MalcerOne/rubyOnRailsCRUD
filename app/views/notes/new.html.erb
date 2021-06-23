@@ -1,5 +1,10 @@
-<h1>Crie uma anotação!</h1>
+<%= render 'appbar' %>
 
-<%= render 'form' %>
+<div class="container_edit">
+    <h1>Crie uma anotação!</h1>
 
-<%= link_to 'Voltar', notes_path %>
+    <%= render 'form' %>
+
+    <%= link_to '<button class="buttonAction">Voltar</button>'.html_safe, notes_path %>
+</div>
+    

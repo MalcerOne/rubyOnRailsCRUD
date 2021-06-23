@@ -1,21 +1,29 @@
-<h1>Todas as anotações!</h1>
-<%= link_to 'Criar uma nova anotação', new_note_path %>
- 
-<table>
-  <tr>
-    <th>Título</th>
-    <th>Conteúdo</th>
-  </tr>
- 
-  <% @notes.each do |note| %>
-    <tr>
-      <td><%= note.title %></td>
-      <td><%= note.content %></td>
-      <td><%= link_to 'Mostrar', note_path(note) %></td>
-      <td><%= link_to 'Editar', edit_note_path(note) %></td>
-      <td><%= link_to 'Deletar', note_path(note),
-              method: :delete,
-              data: { confirm: 'Tem certeza que deseja deletar essa anotação?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<%= render 'appbar' %>
+
+<div class="container">
+  <h1>Todas as anotações!</h1>
+  <%= link_to '<button class="buttonCreate">Criar uma nova anotação</button>'.html_safe, new_note_path %>
+  
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Conteúdo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @notes.each do |note| %>
+        <tr class="active-row">
+          <td><%= note.title %></td>
+          <td><%= note.content %></td>
+          <td><%= link_to '<button class="buttonAction">Mostrar</button>'.html_safe, note_path(note) %></td>
+          <td><%= link_to '<button class="buttonAction">Editar</button>'.html_safe, edit_note_path(note) %></td>
+          <td><%= link_to '<button class="buttonAction">Deletar</button>'.html_safe, note_path(note),
+                method: :delete,
+                data: { confirm: 'Tem certeza que deseja deletar essa anotação?'} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+  
