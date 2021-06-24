@@ -13,6 +13,7 @@ MalcerOne
 * <a href="https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l"><b>Table used to show the notes</b></a>
 
 ## How to execute the application on localhost
+* Assuming that you already have `ruby` and `rails` installed in your system.
 * Clone the repository
 * On the root of the project, execute on terminal the following: 
 
