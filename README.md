@@ -3,9 +3,6 @@
 Simple CRUD web application using Ruby on Rails framework.
 Get-it is a post-it mimic to develop a basic CRUD.
 
-## Author
-MalcerOne
-
 ## References
 * <a href="https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails"><b>Rails Documentation</b></a>
 * <a href="https://mixandgo.com/learn/how-to-use-link_to-in-rails"><b>Guide to link_to in Rails</b></a>
