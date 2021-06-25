@@ -32,6 +32,13 @@ a {
 	margin: 0.75rem;
 }
 
+#banner-typed-text {
+    display: inline-block;
+    align-self: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+
 .subtitle { 
     align-self: center;
     margin-right: 0.5rem;
@@ -45,6 +52,8 @@ a {
 	box-shadow: 0 1px 24px rgba(0, 0, 0, 0.75);
 	margin-bottom: 1rem;
     border-radius: 5px;
+    min-width: 90vw;
+    flex-wrap:initial;
 }
 
 .container {
