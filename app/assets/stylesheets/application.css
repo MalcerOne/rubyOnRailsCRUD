@@ -64,3 +64,38 @@ a {
     font-size: 22px;
 }
 
+/*-------------Footer---------------*/
+  
+.footer-gray {
+    background-color: #EFEFEF;
+    width: 100%;
+    position:fixed;
+    
+  }
+  
+.footer-custom {
+    color: #888;
+    font: normal normal 12px/1.4 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    max-width: 1008px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+.footer-custom:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  
+.footer-lists:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  
+.ftr-hdr {
+    color: #000;
+    font: 22px/1.4 'BebasNeueRegular', BebasNeue, 'Bebas Neue', Arial, sans-serif;
+    margin: 1em 0 0;
+}
